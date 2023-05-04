@@ -27,6 +27,9 @@ const IndexScreen = ({ navigation }) => {
 
   return (
     <View>
+      <View style={styles.container}>
+        <Text style={styles.welcome}>Tap '+' sign to add new post.</Text>
+      </View>
       <FlatList
         data={state}
         keyExtractor={(blogPost) => blogPost.id}
@@ -77,6 +80,14 @@ const styles = StyleSheet.create({
   plus: {
     marginRight: 10,
     fontSize: 35,
+  },
+  welcome: {
+    fontSize: 18,
+    fontWeight: "bold",
+  },
+  container: {
+    alignItems: "center",
+    marginVertical: 20,
   },
 });
 
